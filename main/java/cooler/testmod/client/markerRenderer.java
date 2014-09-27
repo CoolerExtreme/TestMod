@@ -35,10 +35,12 @@ public class markerRenderer implements ISimpleBlockRenderingHandler
 		IIcon test = block.getIcon(0,0);
         tes.setBrightness(block.getMixedBrightnessForBlock(world, x, y, z));
 		tes.setColorOpaque_F(1, 1, 1);
-		tes.addVertexWithUV(0, 0, 0, 0, 0);//bottom left texture
-		tes.addVertexWithUV(0, 1, 0, 0, test.getMaxV());//top left
+		tes.addTranslation(x, y, z);
+		tes.addVertexWithUV(0, 0, 0, test.getMinU(), test.getMinV());//bottom left texture
+		tes.addVertexWithUV(0, 1, 0, test.getMinU(), test.getMaxV());//top left
 		tes.addVertexWithUV(1, 1, 0, test.getMaxU(), test.getMaxV());//top right
-		tes.addVertexWithUV(1, 0, 0, test.getMaxU(), 0);
+		tes.addVertexWithUV(1, 0, 0, test.getMaxU(), test.getMinV());
+		tes.addTranslation(x, y, z);
 		return true;
 	}
 
