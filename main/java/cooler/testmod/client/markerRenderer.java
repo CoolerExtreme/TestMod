@@ -45,6 +45,7 @@ public class markerRenderer implements ISimpleBlockRenderingHandler
 		tes.setBrightness(block.getMixedBrightnessForBlock(world, x, y, z));
 		tes.setColorOpaque_F(1, 1, 1);
 		tes.addTranslation(x, y, z);
+<<<<<<< HEAD
 
 
 		x=y=z=0;
@@ -68,6 +69,13 @@ public class markerRenderer implements ISimpleBlockRenderingHandler
 
 
 		tes.addTranslation(-x, -y, -z);
+=======
+		tes.addVertexWithUV(0, 0, 0, test.getMinU(), test.getMinV());//bottom left texture
+		tes.addVertexWithUV(0, 1, 0, test.getMinU(), test.getMaxV());//top left
+		tes.addVertexWithUV(1, 1, 0, test.getMaxU(), test.getMaxV());//top right
+		tes.addVertexWithUV(1, 0, 0, test.getMaxU(), test.getMinV());
+		tes.addTranslation(x, y, z);
+>>>>>>> origin/master
 		return true;
 	}
 
