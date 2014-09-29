@@ -14,17 +14,20 @@ import net.minecraft.world.World;
 public class blockMarker extends Block
 {
 	public static int renderid;
+	private static final float vox = 0.0625f; 
+
     public blockMarker()
     {
         super(Material.glass);
         this.setCreativeTab(TestMod.tabTestMod);
         this.setHardness(3.0F);
+        this.setBlockBounds(0.0F, 0.0F, 0.0F, vox, vox, vox);
 		this.setBlockName("BlockMarker");
     }
     @Override
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon("tm:cubetexture");
+        this.blockIcon = register.registerIcon("tm:white");
     }
     @Override
 	public boolean isOpaqueCube()
