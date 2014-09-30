@@ -1,16 +1,14 @@
-package cooler.testmod.client;
-
-import java.util.Map;
+package cooler.test.client;
 
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.IIcon;
-import net.minecraftforge.client.model.obj.WavefrontObject;
-import net.minecraftforge.client.model.obj.GroupObject;
 import net.minecraftforge.client.model.obj.Face;
-import net.minecraftforge.client.model.obj.Vertex;
+import net.minecraftforge.client.model.obj.GroupObject;
 import net.minecraftforge.client.model.obj.TextureCoordinate;
+import net.minecraftforge.client.model.obj.Vertex;
+import net.minecraftforge.client.model.obj.WavefrontObject;
 
-public class Util
+public class RenderingUtils
 {
 	public static void renderWithIcon(WavefrontObject model, IIcon icon, Tessellator tes)
 	{
